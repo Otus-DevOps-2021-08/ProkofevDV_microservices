@@ -17,3 +17,10 @@ docker-host
 
 eval $(docker-machine env docker-host)
 
+docker build -t reddit:latest .
+
+docker run --name reddit -d --network=host reddit:latest
+
+docker tag reddit:latest dmdeveloper77/otus-reddit:1.0
+
+docker push dmdeveloper77/otus-reddit:1.0
