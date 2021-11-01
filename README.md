@@ -24,3 +24,5 @@ docker run --name reddit -d --network=host reddit:latest
 docker tag reddit:latest dmdeveloper77/otus-reddit:1.0
 
 docker push dmdeveloper77/otus-reddit:1.0
+
+docker run --name reddit -d -p 9292:9292 dmdeveloper77/otus-reddit:1.0
