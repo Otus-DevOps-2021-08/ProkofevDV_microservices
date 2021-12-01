@@ -115,3 +115,18 @@ docker run -d --network=reddit -p 9292:9292 dmdeveloper77/ui:1.0
 > docker-compose ps
 
 Для переопределения необходимо передавать флаг --project-name, либо использовать COMPOSE_PROJECT_NAME в переменной окружения.
+
+чтобы узнать ип адрес докер машины
+> docker-machine ip docker-host
+
+башскрипт с цликом запуска докер билдов из папок
+> for i in ui post-py comment; do cd src/$i; bash docker_build.sh; cd -; done
+
+даже если докеры были стартованы докер композом, 
+можно остановить сервис прямо по имени :
+> docker-compose stop post
+
+IP address http://51.250.10.65/
+
+вот как окахывается надо заходитьна докер маиновский хост:
+> docker-machine ssh docker-host
