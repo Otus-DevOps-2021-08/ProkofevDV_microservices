@@ -130,3 +130,6 @@ IP address http://51.250.10.65/
 
 вот как окахывается надо заходитьна докер маиновский хост:
 > docker-machine ssh docker-host
+
+docker-machine rm docker-host
+yc compute instance delete docker-host
